@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Message for You</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="cover" class="page active">
+        <h1>A Journey to See the Most Beautiful Person I Know</h1>
+        <button onclick="revealNextPage('cover', 'photo1')">Start the Gallery</button>
+    </section>
+
+    <section id="photo1" class="page" style="background-image: url('your-image-1.jpg'); display: none;">
+        <div class="message-box">
+            <h2>Moment 1: Your Bright Smile</h2>
+            <p>I love your smile in this moment. It instantly brightens my entire day, every single time.</p>
+            <button onclick="console.log('Next photo logic goes here...');">Next Moment of Light</button>
+        </div>
+    </section>
+
+    <script>
+        function revealNextPage(currentPageId, nextPageId) {
+            // Hide the current page
+            document.getElementById(currentPageId).style.display = 'none';
+
+            // Show the next page
+            document.getElementById(nextPageId).style.display = 'flex';
+        }
+    </script>
+
+</body>
+</html>
